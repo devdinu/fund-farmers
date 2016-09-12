@@ -1,8 +1,9 @@
 import React from 'react';
 import {render} from 'react-dom';
+import  Plan from './plan.jsx'
 
 // get this from service
-var farmersData =  {"farmers": [
+var plans =  {"farmers": [
         {
           "name": "farmer1",
           "crop": "rice",
@@ -16,19 +17,7 @@ var farmersData =  {"farmers": [
           "project_cost": 100000
         }
     ]
-}
-
-var Farmer = React.createClass({
-    render () {
-        return (<p>
-            Name: {this.props.info.name} <br/>
-            {this.props.info.description} <br/>
-            Required Money: {this.props.info.project_cost} <br/>
-            Crop: {this.props.info.crop} <br/>
-            { console.log(this.props.info, this.props.id) } <br/>
-        </p>);
-    }
-})
+};
 
 class App extends React.Component {
   render () {
@@ -37,7 +26,7 @@ class App extends React.Component {
             {
                 this.props.farmers
                     .map(function(farmer, index) {
-                        return <Farmer info={farmer} key={index}/>;
+                        return <Plan info={farmer} key={index}/>;
                     })
             }
         </div>
@@ -45,4 +34,4 @@ class App extends React.Component {
   }
 }
 
-render(<App farmers={farmersData.farmers} />, document.getElementById('app'));
+render(<App farmers={plans.farmers} />, document.getElementById('app'));
