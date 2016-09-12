@@ -1,0 +1,42 @@
+{
+  "name": "fund-farmers",
+  "description": "A product to connect farmers with buyer",
+  "keywords": [
+    "express",
+    "mongoose",
+    "mongodb"
+  ],
+  "version": "1.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dineshkumar-cse/fund-farmers.git"
+  },
+  "engines": {
+    "node": ">=5.x"
+  },
+  "scripts": {
+    "start": "./node_modules/.bin/cross-env NODE_ENV=development ./node_modules/.bin/nodemon app.js",
+    "debug": "./node_modules/.bin/cross-env NODE_ENV=development ./node_modules/.bin/nodemon --debug app.js",
+    "test": "./node_modules/.bin/cross-env NODE_ENV=test ./node_modules/.bin/babel-tape-runner test/test-*.js"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.1",
+    "co": "~4.6.0",
+    "cross-env": "~2.0.0",
+    "express": "~4.14.0",
+    "express-session": "~1.14.0",
+    "forever": "~0.15.1",
+    "mongoose": "~4.5.0",
+    "morgan": "~1.7.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "~6.1.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-tape-runner": "~2.0.1",
+    "eslint": "~3.3.0",
+    "nodemon": "1.10.2",
+    "supertest": "*",
+    "tape": "~4.6.0"
+  }
+}
