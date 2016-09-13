@@ -5,3 +5,5 @@ Steps to develop:
 2) Execute`brew install mongodb` for Mac. Other OS users refer: https://docs.mongodb.com/manual/administration/install-community/
 3) Execute `mongod`
 4) Execute `npm start` to start the app. `npm test` to run tests.
+
+`express-mongoose-generator` (https://www.npmjs.com/package/express-mongoose-generator) is used for generating controllers and models.
