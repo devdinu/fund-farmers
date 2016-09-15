@@ -1,7 +1,9 @@
 import React from 'react';
-import {render} from 'react-dom';
+import {render, ReactDOM} from 'react-dom';
 import  Plan from './plan.jsx'
 import  BuyerView from './buyerView.jsx'
+import Register from '../components/Login/Register.jsx'
+import Login from '../components/Login/Login.jsx'
 
 // get this from service
 var plans = {
@@ -36,9 +38,21 @@ class App extends React.Component {
                 <br/>
                 <br/>
                 <BuyerView plans={this.props.farmers}/>
+                <ul>
+                    <li>Login</li>
+                    <li>Register</li>
+                </ul>
             </div>
         );
     }
 }
 
 render(<App farmers={plans.farmers}/>, document.getElementById('app'));
+ReactDOM.render(
+    <Router>
+        <Route path="/" component={App}>
+            <Route path="/register" component={Register}/>
+            <Route path="/login" component={Login}/>
+        </Route>
+    </Router>,
+    document.getElementById('app'));

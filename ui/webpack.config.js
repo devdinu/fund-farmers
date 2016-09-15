@@ -13,9 +13,10 @@ var config = {
   module: {
     loaders : [
       {
-        test : /\.jsx?/,
-        include : APP_DIR,
-        loader : 'babel'
+        test : /\.jsx?$/,
+        loader : 'babel',
+
+        exclude: /node_modules/
       }
     ]
   }
