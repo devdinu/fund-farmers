@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {render} from 'react-dom';
 
 class Register extends Component {
     render() {
@@ -56,7 +55,5 @@ class Register extends Component {
         )
     }
 }
-
-// render(<Register/>, document.getElementById('register'));
 
 export default Register
