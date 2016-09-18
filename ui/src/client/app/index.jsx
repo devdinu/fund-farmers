@@ -7,9 +7,8 @@ import {browserHistory, Router, Route} from 'react-router'
 
 render(
     <Router history={browserHistory}>
-        <Route path="/src/client" component={App}>
-            <Route path="/register" component={Register}/>
-            <Route path="/login" component={Login}/>
-        </Route>
+        <Route path="/src/client" component={App}/>
+        <Route path="/register" component={Register}/>
+        <Route path="/login" component={Login}/>
     </Router>,
     document.getElementById('app'));
